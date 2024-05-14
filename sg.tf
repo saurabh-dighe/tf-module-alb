@@ -1,6 +1,6 @@
 #Provisions public SG
 resource "aws_security_group" "allow_public" {
-  count       = var.INTERNAL ? 1 : 0
+  count       = var.INTERNAL ? 0 : 1
   name        = "roboshop-${var.ENV}-public-alb-sg"
   description = "roboshop-${var.ENV}-public-alb-sg"
   vpc_id      = data.terraform_remote_state.vpc.outputs.VPC_ID
@@ -26,7 +26,7 @@ resource "aws_security_group" "allow_public" {
 
 #Provisions private SG
 resource "aws_security_group" "allow_private" {
-  count       = var.INTERNAL ? 0 : 1
+  count       = var.INTERNAL ? 1 : 0
   name        = "roboshop-${var.ENV}-private-alb-sg"
   description = "roboshop-${var.ENV}-private-alb-sg"
   vpc_id      = data.terraform_remote_state.vpc.outputs.VPC_ID
