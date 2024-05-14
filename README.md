@@ -1,2 +1,2 @@
-# tf-module-lb
-tf-module-lb
+# tf-module-alb
+tf-module-alb
