@@ -9,6 +9,6 @@
 #   enable_deletion_protection = false
 
 #   tags = {
-#     Environment = "production"
+#     Environment = "ALB_NAME"
 #   }
 # }

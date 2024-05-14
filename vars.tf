@@ -1,3 +1,3 @@
 variable "ENV" {}
-variable "ABL_NAME" {
+variable "ALB_NAME" {
 }
