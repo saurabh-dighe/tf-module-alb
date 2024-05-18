@@ -9,7 +9,7 @@ resource "aws_lb_listener" "private-listener" {
     target_group_arn = aws_lb_target_group.app.arn
   }
   tags = {
-    Name = "Roboshop-${var.ENV}-listner"
+    Name = "Roboshop-${var.ENV}-private-listner"
   }
 }
 
@@ -29,7 +29,7 @@ resource "aws_lb_listener" "public-listener" {
     }
   }
   tags = {
-    Name = "Roboshop-${var.ENV}-listner"
+    Name = "Roboshop-${var.ENV}-public-listner"
   }
 }
 
