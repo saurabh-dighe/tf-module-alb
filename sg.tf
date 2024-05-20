@@ -32,8 +32,8 @@ resource "aws_security_group" "allow_private" {
   vpc_id      = data.terraform_remote_state.vpc.outputs.VPC_ID
 
   ingress {
-    from_port        = 8080
-    to_port          = 8080
+    from_port        = 80
+    to_port          = 80
     protocol         = "tcp"
     cidr_blocks      = [data.terraform_remote_state.vpc.outputs.VPC_CIDR , data.terraform_remote_state.vpc.outputs.DEFAULT_VPC_CIDR]
   }
